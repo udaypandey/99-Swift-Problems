@@ -18,3 +18,11 @@ extension Node {
         return current.value
     }
 }
+
+extension Array {
+    // Array already has `last` property
+    // But in case we need to implement it
+    var last$: Element? {
+        return isEmpty ? nil : self[index(before: endIndex)]
+    }
+}
