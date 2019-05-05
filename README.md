@@ -24,28 +24,22 @@ $ [1, 2, 3, 4, 5, 6].last$
 6
 ```
 
+### [P02](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P02.swift) **(*) Find the last but one element of a list**
+
+```swift
+$ Node(1, 2, 3, 4, 5, 6).secondLast
+5
+$ Node(1).secondLast
+nil
+$ [1, 2, 3, 4, 5, 6].secondLast
+5
+$ [1].secondLast
+nil
+$ [].secondLast
+nil
+```
+
 <!---
-### [P02](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(*) Find the last but one element of a list**
-
-```swift
-$ secondLast [1, 2, 11, 4, 5, 8, 10, 6]
-10
-```
-
-When list is empty you should get exception as shown below.
-
-```swift
-$ secondLast []
-*** Exception: Can't find secondLast element from a list with less than 2 elements
-```
-
-When list has one element
-
-```swift
-$ secondLast [1]
-*** Exception: Can't find secondLast element from a list with less than 2 elements
-```
-
 ### [P03](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(*) Find the K'th element of a list**
 
 ```swift
