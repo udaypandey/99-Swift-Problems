@@ -1,6 +1,6 @@
 # Ninety-Nine Problems in Swift
 
-This is an adaptation of the *Ninety-Nine Prolog Problems]* in swift.
+This is an adaptation of the *Ninety-Nine Prolog Problems* in swift.
 
 
 <!---
