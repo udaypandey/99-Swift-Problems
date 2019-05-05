@@ -15,7 +15,7 @@ This is an adaptation of the *Ninety-Nine Prolog Problems]* in swift.
 
 Lists solutions are given for both linked list and array
 
-### [P01](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(*) Find the last element of a list**
+### [P01](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift) **(*) Find the last element of a list**
 
 ```swift
 $ Node(1, 2, 3, 4, 5, 6).last
