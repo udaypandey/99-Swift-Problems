@@ -3,6 +3,7 @@
 This is an adaptation of the *Ninety-Nine Prolog Problems]* in swift.
 
 
+<!---
 * [Lists](#lists)
 * [Arithmetic](#arithmetic)
 * [Logic and Codes](#logic-and-codes)
@@ -10,6 +11,8 @@ This is an adaptation of the *Ninety-Nine Prolog Problems]* in swift.
 * [Multiway Trees](#multiway-trees)
 * [Graphs](#graphs)
 * [Miscellaneous](#miscellaneous)
+
+-->
 
 ## Lists
 
