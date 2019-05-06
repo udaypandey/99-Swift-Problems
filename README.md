@@ -57,16 +57,16 @@ $ [].index$(2)
 nil
 ```
 
-<!---
-### [P04](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(*) Find the number of elements of a list**
+### [P04](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P04.swift) **(*) Find the number of elements of a list**
 
 ```swift
-$ length' [1..5]
-5
+$ Node(1, 2, 3, 4, 5, 6).count
+7
+$ Node(1).count
+1
 ```
 
-`length'` is a valid function name in Haskell.
-
+<!---
 ### [P05](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(*) Reverse a list**
 
 ```swift
