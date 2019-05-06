@@ -9,23 +9,26 @@
 import Foundation
 
 extension Node {
-//    var secondLast: T? {
-//        // If root is nil, return nil
-//        // If root.next is nil, return nil (need at least 2 elements)
-//        // Else, save previous and next and when next becomes nil,
-//        // return previous.value
-//        guard var current = self.next else { return nil }
-//        var previous = self
-//        while let elem = current.next {
-//            previous = current
-//            current = elem
-//        }
-//        return previous.value
-//    }
+    subscript(_ index: Int) -> T? {
+        var root = self
+        var currentIndex = 0
+        
+        while currentIndex < index {
+            if let next = root.next {
+                root = next
+            } else {
+                return nil
+            }
+            currentIndex += 1
+        }
+        
+        return root.value
+    }
 }
 
 extension Array {
-//    var secondLast: Element? {
-//        return count < 2 ?  nil : self[count - 2]
-//    }
+    func index$(_ index: Int) -> Element? {
+        guard index < count else { return nil }
+        return self[index]
+    }
 }

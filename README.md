@@ -42,14 +42,22 @@ $ [].secondLast
 nil
 ```
 
-<!---
-### [P03](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(*) Find the K'th element of a list**
+### [P03](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P03.swift) **(*) Find the k'th element of a list**
 
 ```swift
-$ kth [1,2,3,4,5] 3
-4
+$ Node(0, 1, 2, 3, 4, 5, 6)[2]
+2
+$ Node(0, 1, 2, 3, 4, 5, 6)[20]
+nil
+$ [0, 1, 2, 3, 4, 5, 6].index$(2)
+2
+$ [0, 1, 2, 3, 4, 5, 6].index$(20)
+nil
+$ [].index$(2)
+nil
 ```
 
+<!---
 ### [P04](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(*) Find the number of elements of a list**
 
 ```swift
