@@ -66,13 +66,20 @@ $ Node(1).count
 1
 ```
 
-<!---
-### [P05](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(*) Reverse a list**
+### [P05](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P05.swift) **(*) Reverse a list**
 
 ```swift
-$ reverse' [1..5]
-[5,4,3,2,1]
+$ Node(1, 2, 3).reverse()
+Node(3, 2, 1)
+$ [1, 2, 3].reverse$()
+[3, 2, 1]
+$ [1, 2, 3].reversed$()
+[3, 2, 1]
 ```
+
+<!---
+
+
 ### [P06](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(*) Find out whether a list is a palindrome**
 
 ```swift
