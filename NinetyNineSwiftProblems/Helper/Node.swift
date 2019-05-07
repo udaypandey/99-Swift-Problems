@@ -14,6 +14,7 @@ class Node<T> {
     
     init(value: T, next: Node<T>? = nil) {
         self.value = value
+        self.next = next
     }
     
     convenience init?(_ values: T...) {

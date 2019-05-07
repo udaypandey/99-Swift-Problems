@@ -10,23 +10,49 @@ import Foundation
 
 extension Node {
     func reverse() -> Node {
-        return self
+        var root = self
+        var newRoot = Node(value: root.value)
+        
+        while let elm = root.next {
+            newRoot = Node(value: elm.value, next: newRoot)
+            root = elm
+        }
+        
+        return newRoot
     }
 }
 
 extension Array {
-    // Not adding count for array as thats a primitive
-    // method in the array implementation and a lot of other
-    // methods depends on its native implementation.
-    
-    // A wrapper would do no good here
+    // Not using any inbuilt functionality apart from count
     mutating func reverse$() {
+        var lastIdx = count - 1
+        var idx = 0
+        
+        while idx < lastIdx {
+            let tmp = self[idx]
+            self[idx] = self[lastIdx]
+            self[lastIdx] = tmp
+            idx += 1
+            lastIdx -= 1
+        }
     }
     
     // We take a simple approach and return an array of
     // reversed elements instead of returning a ReverseCollection
     // like swift library implementation
+    
+    // Not using any inbuilt functionality apart from count
     func reversed$() -> Array {
-        return self
+        let length = count
+
+        var newArray = Array<Element>()
+        newArray.reserveCapacity(length)
+        
+        var idx = length - 1
+        while idx >= 0 {
+            newArray.append(self[idx])
+            idx -= 1
+        }
+        return newArray
     }
 }
