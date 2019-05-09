@@ -35,6 +35,6 @@ class P01Tests: XCTestCase {
 
     func testP0104() {
         let list: [Int] = []
-        XCTAssertEqualNil(list.last$, nil, "Invalid last value")
+        XCTAssertNil(list.last$, "Invalid last value")
     }
 }

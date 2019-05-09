@@ -20,7 +20,7 @@ class P02Tests: XCTestCase {
 
     func testP0101() {
         let node = Node<Int>(6)!
-        XCTAssertEqualNil(node.secondLast, nil, "Invalid last value")
+        XCTAssertNil(node.secondLast, "Invalid last value")
     }
 
     func testP0102() {
@@ -40,6 +40,6 @@ class P02Tests: XCTestCase {
 
     func testP0105() {
         let list: [Int] = []
-        XCTAssertEqualNil(list.secondLast, nil, "Invalid last value")
+        XCTAssertNil(list.secondLast, "Invalid last value")
     }
 }

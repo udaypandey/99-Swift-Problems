@@ -1,1 +1,1 @@
-git checkout master; git merge develop; git push master; git checkout develop
+git checkout master; git merge develop; git push; git checkout develop
