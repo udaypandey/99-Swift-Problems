@@ -36,18 +36,17 @@ extension Array {
             lastIdx -= 1
         }
     }
-    
+
     // We take a simple approach and return an array of
     // reversed elements instead of returning a ReverseCollection
     // like swift library implementation
-    
+
     // Not using any inbuilt functionality apart from count
     func reversed$() -> Array {
         let length = count
 
-        var newArray = Array<Element>()
+        var newArray = [Element]()
         newArray.reserveCapacity(length)
-        
         var idx = length - 1
         while idx >= 0 {
             newArray.append(self[idx])

@@ -15,7 +15,7 @@ extension Node {
 
         var root = self
         var currentIndex = 0
-        
+
         while currentIndex < index {
             if let next = root.next {
                 root = next
@@ -24,7 +24,7 @@ extension Node {
             }
             currentIndex += 1
         }
-        
+
         return root.value
     }
 }

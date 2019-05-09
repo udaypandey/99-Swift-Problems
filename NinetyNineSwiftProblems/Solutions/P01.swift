@@ -11,7 +11,6 @@ import Foundation
 extension Node {
     var last: T {
         var current = self
-        
         while let elem = current.next {
             current = elem
         }

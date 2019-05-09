@@ -12,7 +12,7 @@ extension Node {
     var count: Int {
         var root = self
         var cnt = 1
-        
+
         while let next = root.next {
             root = next
             cnt += 1
@@ -26,6 +26,5 @@ extension Array {
     // Not adding count for array as thats a primitive
     // method in the array implementation and a lot of other
     // methods depends on its native implementation.
-    
     // A wrapper would do no good here
 }

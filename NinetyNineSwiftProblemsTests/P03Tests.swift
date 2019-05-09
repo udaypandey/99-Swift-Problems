@@ -6,11 +6,10 @@
 //  Copyright © 2019 Uday Pandey. All rights reserved.
 //
 
-import XCTest
 @testable import NinetyNineSwiftProblems
+import XCTest
 
 class P03Tests: XCTestCase {
-
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -21,15 +20,14 @@ class P03Tests: XCTestCase {
 
     func testP0301() {
         let node = Node<Int>(Array(0...10))!
-        
-        XCTAssertEqual(node[11], nil, "Invalid last value")
+        XCTAssertNil(node[11], "Invalid last value")
         XCTAssertEqual(node[0], 0, "Invalid last value")
         XCTAssertEqual(node[5], 5, "Invalid last value")
     }
-    
+
     func testP0302() {
         let list = Array(0...10)
-        XCTAssertEqual(list.index$(11), nil, "Invalid last value")
+        XCTAssertNil(list.index$(11), "Invalid last value")
         XCTAssertEqual(list.index$(0), 0, "Invalid last value")
         XCTAssertEqual(list.index$(5), 5, "Invalid last value")
     }
