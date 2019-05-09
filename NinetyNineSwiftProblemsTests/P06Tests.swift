@@ -18,43 +18,25 @@ class P06Tests: XCTestCase {
         super.tearDown()
     }
 
-    func testP0501() {
-        var node = Node<Int>(1, 2, 3)!
-        var reverseNode = node.reverse()
+    func testP0601() {
+        var node = Node<Int>(1, 2, 3, 2, 1)!
+        XCTAssertTrue(node.palindrome, "Invalid state")
 
-        // Using from problem 3
-        XCTAssertEqual(reverseNode[0], 3, "Invalid value")
-        XCTAssertEqual(reverseNode[1], 2, "Invalid value")
-        XCTAssertEqual(reverseNode[2], 1, "Invalid value")
+        node = Node<Int>(1, 2, 3, 3, 2, 1)!
+        XCTAssertTrue(node.palindrome, "Invalid state")
 
-        node = Node<Int>(1)!
-        reverseNode = node.reverse()
-        XCTAssertEqual(reverseNode[0], 1, "Invalid value")
+        node = Node<Int>(1, 2, 3, 3, 2)!
+        XCTAssertFalse(node.palindrome, "Invalid state")
     }
 
-    func testP0502() {
-        var list = [1, 2, 3]
-        list.reverse$()
+    func testP0602() {
+        var list = [1, 2, 3, 2, 1]
+        XCTAssertTrue(list.palindrome, "Invalid state")
 
-        XCTAssertEqual(list[0], 3, "Invalid value")
-        XCTAssertEqual(list[1], 2, "Invalid value")
-        XCTAssertEqual(list[2], 1, "Invalid value")
+        list = [1, 2, 3, 3, 2, 1]
+        XCTAssertTrue(list.palindrome, "Invalid state")
 
-        list = [1]
-        list.reverse$()
-        XCTAssertEqual(list[0], 1, "Invalid value")
-    }
-
-    func testP0503() {
-        var list = [1, 2, 3]
-        var reversedList = list.reversed$()
-
-        XCTAssertEqual(reversedList[0], 3, "Invalid value")
-        XCTAssertEqual(reversedList[1], 2, "Invalid value")
-        XCTAssertEqual(reversedList[2], 1, "Invalid value")
-
-        list = [1]
-        reversedList = list.reversed$()
-        XCTAssertEqual(reversedList[0], 1, "Invalid value")
+        list = [1, 2, 3, 3, 2]
+        XCTAssertFalse(list.palindrome, "Invalid state")
     }
 }
