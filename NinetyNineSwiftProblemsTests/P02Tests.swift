@@ -6,24 +6,23 @@
 //  Copyright © 2019 Uday Pandey. All rights reserved.
 //
 
-import XCTest
 @testable import NinetyNineSwiftProblems
+import XCTest
 
 class P02Tests: XCTestCase {
-
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
     }
 
     func testP0101() {
         let node = Node<Int>(6)!
-        XCTAssertEqual(node.secondLast, nil, "Invalid last value")
+        XCTAssertEqualNil(node.secondLast, nil, "Invalid last value")
     }
-    
+
     func testP0102() {
         let node = Node<Int>(5, 6)!
         XCTAssertEqual(node.secondLast, 5, "Invalid last value")
@@ -33,14 +32,14 @@ class P02Tests: XCTestCase {
         let node = Node<Int>(6, 2, 3, 4, 9)!
         XCTAssertEqual(node.secondLast, 4, "Invalid last value")
     }
-    
+
     func testP0104() {
         let list = [6, 2, 3, 4, 9]
         XCTAssertEqual(list.secondLast, 4, "Invalid last value")
     }
-    
+
     func testP0105() {
         let list: [Int] = []
-        XCTAssertEqual(list.secondLast, nil, "Invalid last value")
+        XCTAssertEqualNil(list.secondLast, nil, "Invalid last value")
     }
 }

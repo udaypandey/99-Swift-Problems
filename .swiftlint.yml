@@ -22,12 +22,13 @@ opt_in_rules:
   - fallthrough
   - fatal_error_message
 #  - file_header
-  - file_name
+#  - file_name
   - first_where
   - identical_operands
   - joined_default_parameter
   - let_var_whitespace
   - last_where
+  - line_length
   - literal_expression_end_indentation
   - lower_acl_than_parent
   - nimble_operator
@@ -60,6 +61,7 @@ opt_in_rules:
   - yoda_condition
 
 identifier_name:
+  allowed_symbols: "$"
   excluded:
     - id
 number_separator:
@@ -67,6 +69,12 @@ number_separator:
 file_name:
   excluded:
     - main.swift
+
+line_length:
+  ignores_function_declarations: true
+  ignores_comments: true
+  warning: 200
+  error: 300
 
 custom_rules:
   rule_id:

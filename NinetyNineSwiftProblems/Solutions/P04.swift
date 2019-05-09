@@ -2,7 +2,7 @@
 //  P04.swift
 //  NinetyNineSwiftProblems
 //
-//  Created by Uday Pandey on 06/05/2019.
+//  Created by Uday Pandey on 03/05/2019.
 //  Copyright © 2019 Uday Pandey. All rights reserved.
 //
 
@@ -17,7 +17,7 @@ extension Node {
             root = next
             cnt += 1
         }
-        
+
         return cnt
     }
 }

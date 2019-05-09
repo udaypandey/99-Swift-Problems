@@ -23,7 +23,7 @@ class Node<T> {
 
     init?(_ values: [T]) {
         guard !values.isEmpty else { return nil }
-        
+
         self.value = values[0]
 
         var next = self

@@ -6,16 +6,16 @@
 //  Copyright © 2019 Uday Pandey. All rights reserved.
 //
 
-import XCTest
 @testable import NinetyNineSwiftProblems
+import XCTest
 
 class P01Tests: XCTestCase {
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
     }
 
     func testP0101() {
@@ -27,7 +27,7 @@ class P01Tests: XCTestCase {
         let node = Node<Int>(6, 2, 3, 4, 9)!
         XCTAssertEqual(node.last, 9, "Invalid last value")
     }
-    
+
     func testP0103() {
         let list = [6, 2, 3, 4, 9]
         XCTAssertEqual(list.last$, 9, "Invalid last value")
@@ -35,7 +35,6 @@ class P01Tests: XCTestCase {
 
     func testP0104() {
         let list: [Int] = []
-        XCTAssertEqual(list.last$, nil, "Invalid last value")
+        XCTAssertEqualNil(list.last$, nil, "Invalid last value")
     }
-
 }

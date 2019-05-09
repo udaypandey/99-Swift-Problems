@@ -2,7 +2,7 @@
 //  P05.swift
 //  NinetyNineSwiftProblems
 //
-//  Created by Uday Pandey on 07/05/2019.
+//  Created by Uday Pandey on 03/05/2019.
 //  Copyright © 2019 Uday Pandey. All rights reserved.
 //
 
@@ -12,12 +12,12 @@ extension Node {
     func reverse() -> Node {
         var root = self
         var newRoot = Node(value: root.value)
-        
+
         while let elm = root.next {
             newRoot = Node(value: elm.value, next: newRoot)
             root = elm
         }
-        
+
         return newRoot
     }
 }
@@ -27,7 +27,7 @@ extension Array {
     mutating func reverse$() {
         var lastIdx = count - 1
         var idx = 0
-        
+
         while idx < lastIdx {
             let tmp = self[idx]
             self[idx] = self[lastIdx]
