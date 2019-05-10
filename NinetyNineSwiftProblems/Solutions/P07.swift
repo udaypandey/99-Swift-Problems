@@ -11,5 +11,13 @@ import Foundation
 extension Node {
 }
 
-extension Array {
+extension Array where Element: Sequence {
+    func flatten() -> [Element.Element] {
+        var rootList = [Element.Element]()
+
+        for elm in self {
+            rootList.append(contentsOf: elm)
+        }
+        return rootList
+    }
 }
