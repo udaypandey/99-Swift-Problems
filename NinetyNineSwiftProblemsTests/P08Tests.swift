@@ -18,43 +18,57 @@ class P08Tests: XCTestCase {
         super.tearDown()
     }
 
-    func testP0501() {
-        var node = Node<Int>(1, 2, 3)!
-        var reverseNode = node.reverse()
+    func testP0801() {
+        var node = Node<Int>(1, 2, 3, 3, 3, 3, 3, 3, 4, 5)!
+        var compressedNode = node.compress()
+        XCTAssertEqual(compressedNode, Node<Int>(1, 2, 3, 4, 5)!, "Invalid compressed value")
 
-        // Using from problem 3
-        XCTAssertEqual(reverseNode[0], 3, "Invalid value")
-        XCTAssertEqual(reverseNode[1], 2, "Invalid value")
-        XCTAssertEqual(reverseNode[2], 1, "Invalid value")
+        node = Node<Int>(3, 3, 3, 3, 3, 3, 3, 3)!
+        compressedNode = node.compress()
+        XCTAssertEqual(compressedNode, Node<Int>(3)!, "Invalid compressed value")
 
-        node = Node<Int>(1)!
-        reverseNode = node.reverse()
-        XCTAssertEqual(reverseNode[0], 1, "Invalid value")
+        node = Node<Int>(3)!
+        compressedNode = node.compress()
+        XCTAssertEqual(compressedNode, Node<Int>(3)!, "Invalid compressed value")
     }
 
-    func testP0502() {
-        var list = [1, 2, 3]
-        list.reverse$()
+    func testP0802() {
+        var list = [1, 2, 3, 3, 3, 3, 3, 3, 4, 5]
+        var compressedList = list.compressed()
+        XCTAssertEqual(compressedList, [1, 2, 3, 4, 5], "Invalid compressed value")
 
-        XCTAssertEqual(list[0], 3, "Invalid value")
-        XCTAssertEqual(list[1], 2, "Invalid value")
-        XCTAssertEqual(list[2], 1, "Invalid value")
+        list = [3, 3, 3, 3, 3, 3]
+        compressedList = list.compressed()
+        XCTAssertEqual(compressedList, [3], "Invalid compressed value")
 
-        list = [1]
-        list.reverse$()
-        XCTAssertEqual(list[0], 1, "Invalid value")
+        list = [3]
+        compressedList = list.compressed()
+        XCTAssertEqual(compressedList, [3], "Invalid compressed value")
+
+        list = []
+        compressedList = list.compressed()
+        XCTAssertEqual(compressedList, [], "Invalid compressed value")
     }
 
-    func testP0503() {
-        var list = [1, 2, 3]
-        var reversedList = list.reversed$()
+    func testP0803() {
+        var list = [1, 2, 3, 3, 3, 3, 3, 3, 4, 5]
+        list.compress()
+        XCTAssertEqual(list, [1, 2, 3, 4, 5], "Invalid compressed value")
 
-        XCTAssertEqual(reversedList[0], 3, "Invalid value")
-        XCTAssertEqual(reversedList[1], 2, "Invalid value")
-        XCTAssertEqual(reversedList[2], 1, "Invalid value")
+        list = [3, 3, 3, 3, 3, 3]
+        list.compress()
+        XCTAssertEqual(list, [3], "Invalid compressed value")
 
-        list = [1]
-        reversedList = list.reversed$()
-        XCTAssertEqual(reversedList[0], 1, "Invalid value")
+        list = [3]
+        list.compress()
+        XCTAssertEqual(list, [3], "Invalid compressed value")
+
+        list = []
+        list.compress()
+        XCTAssertEqual(list, [], "Invalid compressed value")
+
+        list = [1, 2, 3, 3, 3, 3, 3, 3, 4, 5, 5, 6, 7, 7, 7, 8, 9, 9, 10, 10, 11]
+        list.compress()
+        XCTAssertEqual(list, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "Invalid compressed value")
     }
 }

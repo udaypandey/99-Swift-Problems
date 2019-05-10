@@ -1,5 +1,5 @@
 //
-//  P05.swift
+//  P06.swift
 //  NinetyNineSwiftProblems
 //
 //  Created by Uday Pandey on 03/05/2019.

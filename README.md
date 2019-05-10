@@ -77,44 +77,67 @@ $ [1, 2, 3].reversed$()
 [3, 2, 1]
 ```
 
-<!---
-
-
-### [P06](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(*) Find out whether a list is a palindrome**
+### [P06](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P06.swift) **(*) Find out whether a list is a palindrome**
 
 ```swift
-$ isPalindrome ["x","a","m","a","x"]
-True
-
-$ isPalindrome [1,2,3,4,5]
-False
+$ Node(1, 2, 3, 2, 1).palindrome
+true
+$ Node(1, 2, 3, 3, 2, 1).palindrome
+true
+$ Node(1, 2, 3, 3, 1).palindrome
+false
+$ [1, 2, 3, 2, 1].palindrome
+true
+$ [1, 2, 3, 3, 2, 1].palindrome
+true
+$ [1, 2, 3, 3, 2].palindrome
+false
 ```
 
-### [P07](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(\*\*) Flatten a nested list structure**
+<!---
+### [P07](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P07.swift) **(\*\*) Flatten a nested list structure**
 
 ```swift
 $ flatten (List [Elem 1, List [Elem 2, List [Elem 3, Elem 4], Elem 5]])
 [1,2,3,4,5]
 ```
+-->
 
-### [P08](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(\*\*) Eliminate consecutive duplicates of list elements**
+### [P08](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P08.swift) **(\*\*) Eliminate consecutive duplicates of list elements**
 
-If a list contains repeated elements they should be replaced with a single copy of the element. The order of the elements should not be changed
+If a list contains repeated elements they should be replaced with a single copy of the element. The order of the elements should remain the same.
 
 ```swift
-$ compress ["a", "a", "a", "a", "b", "c", "c", "a", "a", "d", "e", "e", "e", "e"]
-["a","b","c","a","d","e"]
+$ Node(1, 2, 3, 3, 3, 4).compress()
+Node(1, 2, 3, 4)
+$ Node(1, 2, 3, 3, 3, 4, 4).compress()
+Node(1, 2, 3, 4)
+$ [1, 2, 3, 3, 3, 4].compress()
+[1, 2, 3, 4]
+$ [1, 2, 3, 3, 4, 4].compress()
+[1, 2, 3, 4]
 ```
 
-### [P09](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(\*\*) Pack consecutive duplicates of list elements into sublists**
+### [P09](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P09.swift) **(\*\*) Pack consecutive duplicates of list elements into sublists**
 
 If a list contains repeated elements they should be placed in separate sublists.
 
 ```swift
-$ pack ["a", "a", "a", "a", "b", "c", "c", "a", "a", "d", "e", "e", "e", "e"]
-[["a","a","a","a"],["b"],["c","c"],["a","a"],["d"],["e","e","e","e"]]
+$ Node(1, 2, 3, 3, 4, 5, 5).pack()
+Node(Node(1), Node(2), Node(3, 3), Node(4), Node(5, 5))
+$ Node(3, 3, 3, 3).pack()
+Node(Node(3, 3, 3, 3))
+$ Node(3, 3, 3, 3, 4, 4, 4,).pack()
+Node(Node(3, 3, 3, 3), Node(4, 4, 4))
+$ [1, 2, 3, 3, 4, 5, 5].pack()
+[[1], [2], [3, 3], [4], [5, 5]]
+$ [3, 3, 3, 3].pack()
+[[3, 3, 3, 3]]
+$ [3, 3, 3, 4, 4, 4].pack()
+[[3, 3, 3], [4, 4, 4]]
 ```
 
+<!---
 ### [P10](https://github.com/udaypandey/Ninety-Nine-Swift-Problems/blob/master/NinetyNineSwiftProblems/Solutions/P01.swift **(*) Run-length encoding of a list**
 
 Use the result of problem 1.09 to implement the so-called run-length encoding data compression method. Consecutive duplicates of elements are encoded as terms [N,E] where N is the number of duplicates of the element E.

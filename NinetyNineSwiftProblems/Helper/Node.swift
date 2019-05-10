@@ -34,3 +34,24 @@ class Node<T> {
         }
     }
 }
+
+extension Node: Equatable where T: Equatable {
+    static func == (left: Node, right: Node) -> Bool {
+        guard left.value == right.value else { return false }
+
+        guard let leftNext = left.next,
+              let rightNext = right.next else { return left.next == right.next }
+
+        return leftNext == rightNext
+    }
+}
+
+extension Node: CustomStringConvertible {
+    var description: String {
+        guard let next = self.next else {
+            return "\(value)"
+        }
+
+        return "\(value):\(next.description)"
+    }
+}
