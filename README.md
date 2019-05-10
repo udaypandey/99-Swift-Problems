@@ -23,6 +23,7 @@ Lists solutions are given for both linked list and array
 ```swift
 $ Node(1, 2, 3, 4, 5, 6).last
 6
+
 $ [1, 2, 3, 4, 5, 6].last$
 6
 ```
@@ -32,12 +33,16 @@ $ [1, 2, 3, 4, 5, 6].last$
 ```swift
 $ Node(1, 2, 3, 4, 5, 6).secondLast
 5
+
 $ Node(1).secondLast
 nil
+
 $ [1, 2, 3, 4, 5, 6].secondLast
 5
+
 $ [1].secondLast
 nil
+
 $ [].secondLast
 nil
 ```
@@ -47,12 +52,16 @@ nil
 ```swift
 $ Node(0, 1, 2, 3, 4, 5, 6)[2]
 2
+
 $ Node(0, 1, 2, 3, 4, 5, 6)[20]
 nil
+
 $ [0, 1, 2, 3, 4, 5, 6].index$(2)
 2
+
 $ [0, 1, 2, 3, 4, 5, 6].index$(20)
 nil
+
 $ [].index$(2)
 nil
 ```
@@ -62,6 +71,7 @@ nil
 ```swift
 $ Node(1, 2, 3, 4, 5, 6).count
 7
+
 $ Node(1).count
 1
 ```
@@ -71,8 +81,10 @@ $ Node(1).count
 ```swift
 $ Node(1, 2, 3).reverse()
 Node(3, 2, 1)
+
 $ [1, 2, 3].reverse$()
 [3, 2, 1]
+
 $ [1, 2, 3].reversed$()
 [3, 2, 1]
 ```
@@ -82,14 +94,19 @@ $ [1, 2, 3].reversed$()
 ```swift
 $ Node(1, 2, 3, 2, 1).palindrome
 true
+
 $ Node(1, 2, 3, 3, 2, 1).palindrome
 true
+
 $ Node(1, 2, 3, 3, 1).palindrome
 false
+
 $ [1, 2, 3, 2, 1].palindrome
 true
+
 $ [1, 2, 3, 3, 2, 1].palindrome
 true
+
 $ [1, 2, 3, 3, 2].palindrome
 false
 ```
@@ -110,10 +127,13 @@ If a list contains repeated elements they should be replaced with a single copy 
 ```swift
 $ Node(1, 2, 3, 3, 3, 4).compress()
 Node(1, 2, 3, 4)
+
 $ Node(1, 2, 3, 3, 3, 4, 4).compress()
 Node(1, 2, 3, 4)
+
 $ [1, 2, 3, 3, 3, 4].compress()
 [1, 2, 3, 4]
+
 $ [1, 2, 3, 3, 4, 4].compress()
 [1, 2, 3, 4]
 ```
@@ -125,14 +145,19 @@ If a list contains repeated elements they should be placed in separate sublists.
 ```swift
 $ Node(1, 2, 3, 3, 4, 5, 5).pack()
 Node(Node(1), Node(2), Node(3, 3), Node(4), Node(5, 5))
+
 $ Node(3, 3, 3, 3).pack()
 Node(Node(3, 3, 3, 3))
+
 $ Node(3, 3, 3, 3, 4, 4, 4).pack()
 Node(Node(3, 3, 3, 3), Node(4, 4, 4))
+
 $ [1, 2, 3, 3, 4, 5, 5].pack()
 [[1], [2], [3, 3], [4], [5, 5]]
+
 $ [3, 3, 3, 3].pack()
 [[3, 3, 3, 3]]
+
 $ [3, 3, 3, 4, 4, 4].pack()
 [[3, 3, 3], [4, 4, 4]]
 ```
