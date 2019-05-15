@@ -19,7 +19,7 @@ class P03Tests: XCTestCase {
     }
 
     func testP0301() {
-        let node = Node<Int>(Array(0...10))!
+        let node = Node(Array(0...10))!
         XCTAssertNil(node[11], "Invalid last value")
         XCTAssertEqual(node[0], 0, "Invalid last value")
         XCTAssertEqual(node[5], 5, "Invalid last value")

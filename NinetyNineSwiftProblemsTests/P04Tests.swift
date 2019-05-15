@@ -19,12 +19,12 @@ class P04Tests: XCTestCase {
     }
 
     func testP0401() {
-        let node = Node<Int>(1)!
+        let node = Node(1)!
         XCTAssertEqual(node.count, 1, "Invalid count")
     }
 
     func testP0402() {
-        let node = Node<Int>(Array(0...10))!
+        let node = Node(Array(0...10))!
         XCTAssertEqual(node.count, 11, "Invalid count")
     }
 }

@@ -19,7 +19,7 @@ class P05Tests: XCTestCase {
     }
 
     func testP0501() {
-        var node = Node<Int>(1, 2, 3)!
+        var node = Node(1, 2, 3)!
         var reverseNode = node.reverse()
 
         // Using from problem 3
@@ -27,7 +27,7 @@ class P05Tests: XCTestCase {
         XCTAssertEqual(reverseNode[1], 2, "Invalid value")
         XCTAssertEqual(reverseNode[2], 1, "Invalid value")
 
-        node = Node<Int>(1)!
+        node = Node(1)!
         reverseNode = node.reverse()
         XCTAssertEqual(reverseNode[0], 1, "Invalid value")
     }

@@ -19,17 +19,17 @@ class P08Tests: XCTestCase {
     }
 
     func testP0801() {
-        var node = Node<Int>(1, 2, 3, 3, 3, 3, 3, 3, 4, 5)!
+        var node = Node(1, 2, 3, 3, 3, 3, 3, 3, 4, 5)!
         var compressedNode = node.compress()
-        XCTAssertEqual(compressedNode, Node<Int>(1, 2, 3, 4, 5)!, "Invalid compressed value")
+        XCTAssertEqual(compressedNode, Node(1, 2, 3, 4, 5)!, "Invalid compressed value")
 
-        node = Node<Int>(3, 3, 3, 3, 3, 3, 3, 3)!
+        node = Node(3, 3, 3, 3, 3, 3, 3, 3)!
         compressedNode = node.compress()
-        XCTAssertEqual(compressedNode, Node<Int>(3)!, "Invalid compressed value")
+        XCTAssertEqual(compressedNode, Node(3)!, "Invalid compressed value")
 
-        node = Node<Int>(3)!
+        node = Node(3)!
         compressedNode = node.compress()
-        XCTAssertEqual(compressedNode, Node<Int>(3)!, "Invalid compressed value")
+        XCTAssertEqual(compressedNode, Node(3)!, "Invalid compressed value")
     }
 
     func testP0802() {

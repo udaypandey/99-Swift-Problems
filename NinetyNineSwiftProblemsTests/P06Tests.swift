@@ -19,13 +19,13 @@ class P06Tests: XCTestCase {
     }
 
     func testP0601() {
-        var node = Node<Int>(1, 2, 3, 2, 1)!
+        var node = Node(1, 2, 3, 2, 1)!
         XCTAssertTrue(node.palindrome, "Invalid state")
 
-        node = Node<Int>(1, 2, 3, 3, 2, 1)!
+        node = Node(1, 2, 3, 3, 2, 1)!
         XCTAssertTrue(node.palindrome, "Invalid state")
 
-        node = Node<Int>(1, 2, 3, 3, 2)!
+        node = Node(1, 2, 3, 3, 2)!
         XCTAssertFalse(node.palindrome, "Invalid state")
     }
 
