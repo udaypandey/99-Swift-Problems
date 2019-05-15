@@ -27,6 +27,10 @@ class P06Tests: XCTestCase {
 
         node = Node(1, 2, 3, 3, 2)
         XCTAssertFalse(node.palindrome, "Invalid state")
+
+        // Says its a palindrome for just one element
+        node = Node(1)
+        XCTAssertTrue(node.palindrome, "Invalid state")
     }
 
     func testP0602() {

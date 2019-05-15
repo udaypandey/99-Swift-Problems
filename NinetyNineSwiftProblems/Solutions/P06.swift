@@ -18,6 +18,8 @@ extension Node where T: Equatable {
             root = next
         }
 
+        // Leverages array palindrome implementation
+        // instead of doing it again just for Node
         return arr.palindrome
     }
 }

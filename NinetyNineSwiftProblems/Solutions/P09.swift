@@ -40,6 +40,8 @@ extension Node where T: Equatable {
 }
 
 extension Array where Element: Equatable {
+    // There is no `packed` version of the method as returned array
+    // Element is of type: [Element]
     func pack() -> [[Element]] {
         var rootList = [[Element]]()
         guard !isEmpty else { return rootList }
