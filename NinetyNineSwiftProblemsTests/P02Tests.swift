@@ -19,17 +19,17 @@ class P02Tests: XCTestCase {
     }
 
     func testP0101() {
-        let node = Node(6)!
+        let node = Node(6)
         XCTAssertNil(node.secondLast, "Invalid last value")
     }
 
     func testP0102() {
-        let node = Node(5, 6)!
+        let node = Node(5, 6)
         XCTAssertEqual(node.secondLast, 5, "Invalid last value")
     }
 
     func testP0103() {
-        let node = Node(6, 2, 3, 4, 9)!
+        let node = Node(6, 2, 3, 4, 9)
         XCTAssertEqual(node.secondLast, 4, "Invalid last value")
     }
 

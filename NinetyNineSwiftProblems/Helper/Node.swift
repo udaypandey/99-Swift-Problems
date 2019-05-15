@@ -17,12 +17,14 @@ class Node<T> {
         self.next = next
     }
 
-    convenience init?(_ values: T...) {
+    convenience init(_ values: T...) {
         self.init(values)
     }
 
-    init?(_ values: [T]) {
-        guard !values.isEmpty else { return nil }
+    init(_ values: [T]) {
+        guard !values.isEmpty else {
+            preconditionFailure("Empty list")
+        }
 
         self.value = values[0]
 
@@ -48,10 +50,13 @@ extension Node: Equatable where T: Equatable {
 
 extension Node: CustomStringConvertible {
     var description: String {
-        guard let next = self.next else {
-            return "\(value)"
-        }
+        var str = ["\(value)"]
 
-        return "\(value):\(next.description)"
+        var root = self
+        while let next = root.next {
+            str.append("\(next.value)")
+            root = next
+        }
+        return "Node(" + str.joined(separator: ", ") + ")"
     }
 }

@@ -19,12 +19,12 @@ class P01Tests: XCTestCase {
     }
 
     func testP0101() {
-        let node = Node(6)!
+        let node = Node(6)
         XCTAssertEqual(node.last, 6, "Invalid last value")
     }
 
     func testP0102() {
-        let node = Node(6, 2, 3, 4, 9)!
+        let node = Node(6, 2, 3, 4, 9)
         XCTAssertEqual(node.last, 9, "Invalid last value")
     }
 
