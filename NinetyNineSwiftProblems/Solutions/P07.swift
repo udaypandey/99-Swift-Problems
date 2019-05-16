@@ -8,7 +8,10 @@
 
 import Foundation
 
-extension Node {
+extension Node where Element: NodeType {
+    func flatten() -> Node {
+        return self
+    }
 }
 
 extension Array where Element: Sequence {

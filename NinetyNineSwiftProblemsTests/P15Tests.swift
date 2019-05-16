@@ -18,43 +18,54 @@ class P15Tests: XCTestCase {
         super.tearDown()
     }
 
-    func testP0501() {
+    func testP1501() {
         var node = Node(1, 2, 3)
-        var reverseNode = node.reverse()
+        var duplicateNode = node.duplicate(3)
 
         // Using from problem 3
-        XCTAssertEqual(reverseNode[0], 3, "Invalid value")
-        XCTAssertEqual(reverseNode[1], 2, "Invalid value")
-        XCTAssertEqual(reverseNode[2], 1, "Invalid value")
+        XCTAssertEqual(duplicateNode.count, 9, "Invalid value")
+        XCTAssertEqual(duplicateNode[0], 1, "Invalid value")
+        XCTAssertEqual(duplicateNode[1], 1, "Invalid value")
+        XCTAssertEqual(duplicateNode[2], 1, "Invalid value")
+        XCTAssertEqual(duplicateNode[3], 2, "Invalid value")
+        XCTAssertEqual(duplicateNode[4], 2, "Invalid value")
+        XCTAssertEqual(duplicateNode[5], 2, "Invalid value")
+        XCTAssertEqual(duplicateNode[6], 3, "Invalid value")
+        XCTAssertEqual(duplicateNode[7], 3, "Invalid value")
+        XCTAssertEqual(duplicateNode[8], 3, "Invalid value")
 
         node = Node(1)
-        reverseNode = node.reverse()
-        XCTAssertEqual(reverseNode[0], 1, "Invalid value")
+        duplicateNode = node.duplicate(4)
+
+        // Using from problem 3
+        XCTAssertEqual(duplicateNode.count, 4, "Invalid value")
+        XCTAssertEqual(duplicateNode[0], 1, "Invalid value")
+        XCTAssertEqual(duplicateNode[1], 1, "Invalid value")
+        XCTAssertEqual(duplicateNode[2], 1, "Invalid value")
+        XCTAssertEqual(duplicateNode[3], 1, "Invalid value")
     }
 
-    func testP0502() {
+    func testP1502() {
         var list = [1, 2, 3]
-        list.reverse$()
+        var duplicateList = list.duplicate(3)
 
-        XCTAssertEqual(list[0], 3, "Invalid value")
-        XCTAssertEqual(list[1], 2, "Invalid value")
-        XCTAssertEqual(list[2], 1, "Invalid value")
+        XCTAssertEqual(duplicateList.count, 9, "Invalid value")
+        XCTAssertEqual(duplicateList[0], 1, "Invalid value")
+        XCTAssertEqual(duplicateList[1], 1, "Invalid value")
+        XCTAssertEqual(duplicateList[2], 1, "Invalid value")
+        XCTAssertEqual(duplicateList[3], 2, "Invalid value")
+        XCTAssertEqual(duplicateList[4], 2, "Invalid value")
+        XCTAssertEqual(duplicateList[5], 2, "Invalid value")
+        XCTAssertEqual(duplicateList[6], 3, "Invalid value")
+        XCTAssertEqual(duplicateList[7], 3, "Invalid value")
+        XCTAssertEqual(duplicateList[8], 3, "Invalid value")
 
         list = [1]
-        list.reverse$()
-        XCTAssertEqual(list[0], 1, "Invalid value")
-    }
-
-    func testP0503() {
-        var list = [1, 2, 3]
-        var reversedList = list.reversed$()
-
-        XCTAssertEqual(reversedList[0], 3, "Invalid value")
-        XCTAssertEqual(reversedList[1], 2, "Invalid value")
-        XCTAssertEqual(reversedList[2], 1, "Invalid value")
-
-        list = [1]
-        reversedList = list.reversed$()
-        XCTAssertEqual(reversedList[0], 1, "Invalid value")
+        duplicateList = list.duplicate(4)
+        XCTAssertEqual(duplicateList.count, 4, "Invalid value")
+        XCTAssertEqual(duplicateList[0], 1, "Invalid value")
+        XCTAssertEqual(duplicateList[1], 1, "Invalid value")
+        XCTAssertEqual(duplicateList[2], 1, "Invalid value")
+        XCTAssertEqual(duplicateList[3], 1, "Invalid value")
     }
 }

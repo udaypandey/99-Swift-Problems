@@ -8,7 +8,13 @@
 
 import Foundation
 
-class Node<T> {
+protocol NodeType {
+    associatedtype Element
+}
+
+class Node<T>: NodeType {
+    typealias Element = T
+
     var value: T
     var next: Node<T>?
 

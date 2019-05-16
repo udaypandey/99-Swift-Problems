@@ -8,8 +8,38 @@
 
 import Foundation
 
-extension Node {
-}
+//extension Node where T: Equatable {
+//    func decode() -> Node<(Int, T)> {
+//        var root = self.pack()
+//
+//        // Using count and subscript which was written earlier to avoid
+//        // duplicating the logic here
+//        let val = (root.value.count, root.value[0]!)
+//        let rootNode = Node<(Int, T)>(value: val)
+//        var currentNode = rootNode
+//
+//        while let next = root.next {
+//            let val = (next.value.count, next.value[0]!)
+//            let newCurrentNode = Node<(Int, T)>(value: val)
+//
+//            currentNode.next = newCurrentNode
+//            currentNode = newCurrentNode
+//            root = next
+//        }
+//
+//        return rootNode
+//    }
+//}
 
-extension Array {
-}
+//extension Array where Element: [(T: Int, U: Equatable)]  {
+//    func encode() -> [(Int, Element)] {
+//        let packedList = self.pack()
+//        var encodedList = [(Int, Element)]()
+//
+//        packedList.forEach { elms in
+//            encodedList.append((elms.count, elms[0]))
+//        }
+//
+//        return encodedList
+//    }
+//}
