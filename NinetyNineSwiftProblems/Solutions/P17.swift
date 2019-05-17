@@ -11,37 +11,32 @@ extension Node {
     func split(at index: Int) -> (left: Node?, right: Node?) {
         // If index < 0, there wont be any elements in left
         // If index >= count - 1, no elements in right
-        guard index < count - 1 else {
-            return (left: self.duplicate(), right: nil)
+        guard index < count else {
+            return (left: self, right: nil)
         }
 
         guard index > 0 else {
-            return (left: nil, right: self.duplicate())
+            return (left: nil, right: self)
         }
 
-        var root = self
+        var root: Node = self
+
         var currentIdx = 1
         let leftNode = Node(value: root.value)
-
+        var rightNode: Node?
         var currentNode = leftNode
-        while let next = root.next, currentIdx < index {
-            print("add to left \(currentIdx): \(next.value)")
-            let newNode = Node(value: next.value)
-            currentNode.next = newNode
-            currentNode = newNode
 
-            print(currentNode)
-
-            root = next
-            currentIdx += 1
-        }
-
-        let rightNode = Node(value: root.value)
-        currentNode = rightNode
         while let next = root.next {
             let newNode = Node(value: next.value)
-            currentNode.next = newNode
-            currentNode = newNode
+
+            if currentIdx == index {
+                // Switch to right node list
+                rightNode = newNode
+                currentNode = newNode
+            } else {
+                currentNode.next = newNode
+                currentNode = newNode
+            }
 
             root = next
             currentIdx += 1
@@ -74,8 +69,6 @@ extension Array {
             }
         }
 
-        print (left)
-        print (right)
         return (left: left, right: right)
     }
 }

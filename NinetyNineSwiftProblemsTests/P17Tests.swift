@@ -21,8 +21,6 @@ class P17Tests: XCTestCase {
         var node = Node(1, 2, 3, 4, 5, 6, 7, 8)
         var (left, right) = node.split(at: 3)
 
-        print(left)
-        print(right)
         XCTAssertEqual(left?.count, 3, "Invalid value")
         XCTAssertEqual(left, Node(1, 2, 3), "Invalid value")
         XCTAssertEqual(right?.count, 5, "Invalid value")
