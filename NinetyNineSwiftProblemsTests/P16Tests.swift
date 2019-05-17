@@ -17,7 +17,7 @@ class P16Tests: XCTestCase {
         super.tearDown()
     }
 
-    func testP1501() {
+    func testP1601() {
         var node = Node(1, 2, 3, 4, 5, 6, 7, 8)
         var duplicateNode = node.drop(3)
 
@@ -43,7 +43,7 @@ class P16Tests: XCTestCase {
         XCTAssertEqual(duplicateNode[3], 7, "Invalid value")
     }
 
-    func testP1502() {
+    func testP1602() {
         var list = [1, 2, 3, 4, 5, 6, 7, 8]
         var duplicateList = list.drop(3)
 

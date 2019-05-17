@@ -21,6 +21,12 @@
 		78044321227EBE65002F08C5 /* P03Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78044320227EBE65002F08C5 /* P03Tests.swift */; };
 		78289C47228DE78F0064D2A6 /* P16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78289C46228DE78F0064D2A6 /* P16.swift */; };
 		78289C49228DE9430064D2A6 /* P16Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78289C48228DE9430064D2A6 /* P16Tests.swift */; };
+		78289C4B228E0A460064D2A6 /* P17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78289C4A228E0A460064D2A6 /* P17.swift */; };
+		78289C4D228E0A4E0064D2A6 /* P18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78289C4C228E0A4E0064D2A6 /* P18.swift */; };
+		78289C4F228E0A550064D2A6 /* P19.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78289C4E228E0A550064D2A6 /* P19.swift */; };
+		78289C51228E0A5C0064D2A6 /* P20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78289C50228E0A5C0064D2A6 /* P20.swift */; };
+		78289C53228E0A630064D2A6 /* P21.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78289C52228E0A630064D2A6 /* P21.swift */; };
+		78289C55228E98300064D2A6 /* P17Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78289C54228E98300064D2A6 /* P17Tests.swift */; };
 		78B97F142284B83400F6EE62 /* P14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B97F0A2284B83400F6EE62 /* P14.swift */; };
 		78B97F152284B83400F6EE62 /* P08.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B97F0B2284B83400F6EE62 /* P08.swift */; };
 		78B97F162284B83400F6EE62 /* P11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B97F0C2284B83400F6EE62 /* P11.swift */; };
@@ -80,6 +86,12 @@
 		78044320227EBE65002F08C5 /* P03Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P03Tests.swift; sourceTree = "<group>"; };
 		78289C46228DE78F0064D2A6 /* P16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P16.swift; sourceTree = "<group>"; };
 		78289C48228DE9430064D2A6 /* P16Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P16Tests.swift; sourceTree = "<group>"; };
+		78289C4A228E0A460064D2A6 /* P17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P17.swift; sourceTree = "<group>"; };
+		78289C4C228E0A4E0064D2A6 /* P18.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P18.swift; sourceTree = "<group>"; };
+		78289C4E228E0A550064D2A6 /* P19.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P19.swift; sourceTree = "<group>"; };
+		78289C50228E0A5C0064D2A6 /* P20.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P20.swift; sourceTree = "<group>"; };
+		78289C52228E0A630064D2A6 /* P21.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P21.swift; sourceTree = "<group>"; };
+		78289C54228E98300064D2A6 /* P17Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P17Tests.swift; sourceTree = "<group>"; };
 		78B97F0A2284B83400F6EE62 /* P14.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P14.swift; sourceTree = "<group>"; };
 		78B97F0B2284B83400F6EE62 /* P08.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P08.swift; sourceTree = "<group>"; };
 		78B97F0C2284B83400F6EE62 /* P11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P11.swift; sourceTree = "<group>"; };
@@ -179,6 +191,7 @@
 				78B97F202284B83E00F6EE62 /* P14Tests.swift */,
 				78B97F262284B83F00F6EE62 /* P15Tests.swift */,
 				78289C48228DE9430064D2A6 /* P16Tests.swift */,
+				78289C54228E98300064D2A6 /* P17Tests.swift */,
 				78044320227EBE65002F08C5 /* P03Tests.swift */,
 				78D550FC2280CFBA0085A5CA /* P04Tests.swift */,
 				78CDC17C2281DDFE008C28F4 /* P05Tests.swift */,
@@ -203,6 +216,11 @@
 				78044316227CA0A4002F08C5 /* P01.swift */,
 				7804431A227CF04C002F08C5 /* P02.swift */,
 				7804431E227EBE2E002F08C5 /* P03.swift */,
+				78289C4A228E0A460064D2A6 /* P17.swift */,
+				78289C4C228E0A4E0064D2A6 /* P18.swift */,
+				78289C4E228E0A550064D2A6 /* P19.swift */,
+				78289C50228E0A5C0064D2A6 /* P20.swift */,
+				78289C52228E0A630064D2A6 /* P21.swift */,
 				78D550FE2280D0120085A5CA /* P04.swift */,
 				78CDC17A2281DDF2008C28F4 /* P05.swift */,
 			);
@@ -429,21 +447,26 @@
 				78B97F182284B83400F6EE62 /* P10.swift in Sources */,
 				78B97F1A2284B83400F6EE62 /* P15.swift in Sources */,
 				78B97F1C2284B83400F6EE62 /* P06.swift in Sources */,
+				78289C4F228E0A550064D2A6 /* P19.swift in Sources */,
 				78CDC17B2281DDF2008C28F4 /* P05.swift in Sources */,
 				78B97F152284B83400F6EE62 /* P08.swift in Sources */,
 				78044317227CA0A4002F08C5 /* P01.swift in Sources */,
+				78289C51228E0A5C0064D2A6 /* P20.swift in Sources */,
 				7804431B227CF04C002F08C5 /* P02.swift in Sources */,
 				78B97F1B2284B83400F6EE62 /* P12.swift in Sources */,
 				78B97F172284B83400F6EE62 /* P09.swift in Sources */,
 				780442F3227C9F4B002F08C5 /* ViewController.swift in Sources */,
 				78D550FF2280D0120085A5CA /* P04.swift in Sources */,
+				78289C4B228E0A460064D2A6 /* P17.swift in Sources */,
 				780442F1227C9F4B002F08C5 /* AppDelegate.swift in Sources */,
+				78289C4D228E0A4E0064D2A6 /* P18.swift in Sources */,
 				78B97F192284B83400F6EE62 /* P13.swift in Sources */,
 				7804431F227EBE2E002F08C5 /* P03.swift in Sources */,
 				78B97F162284B83400F6EE62 /* P11.swift in Sources */,
 				78B97F142284B83400F6EE62 /* P14.swift in Sources */,
 				78289C47228DE78F0064D2A6 /* P16.swift in Sources */,
 				78B97F1D2284B83400F6EE62 /* P07.swift in Sources */,
+				78289C53228E0A630064D2A6 /* P21.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +480,7 @@
 				78289C49228DE9430064D2A6 /* P16Tests.swift in Sources */,
 				78B97F2E2284B83F00F6EE62 /* P11Tests.swift in Sources */,
 				78B97F2A2284B83F00F6EE62 /* P14Tests.swift in Sources */,
+				78289C55228E98300064D2A6 /* P17Tests.swift in Sources */,
 				78044321227EBE65002F08C5 /* P03Tests.swift in Sources */,
 				78B97F2F2284B83F00F6EE62 /* P08Tests.swift in Sources */,
 				78CDC17D2281DDFE008C28F4 /* P05Tests.swift in Sources */,
