@@ -18,32 +18,24 @@ class P18Tests: XCTestCase {
     }
 
     func testP1801() {
-//        var node = Node(1, 2, 3, 4, 5, 6, 7, 8)
-//        var (left, right) = node.split(at: 3)
-//
-//        XCTAssertEqual(left?.count, 3, "Invalid value")
-//        XCTAssertEqual(left, Node(1, 2, 3), "Invalid value")
-//        XCTAssertEqual(right?.count, 5, "Invalid value")
-//        XCTAssertEqual(right, Node(4, 5, 6, 7, 8), "Invalid value")
-//
-//        node = Node(1, 2)
-//        (left, right) = node.split(at: 1)
-//        XCTAssertEqual(left?.count, 1, "Invalid value")
-//        XCTAssertEqual(left, Node(1), "Invalid value")
-//        XCTAssertEqual(right?.count, 1, "Invalid value")
-//        XCTAssertEqual(right, Node(2), "Invalid value")
-//
-//        node = Node(1, 2, 3, 4, 5, 6, 7, 8)
-//        (left, right) = node.split(at: 10)
-//        XCTAssertEqual(left?.count, 8, "Invalid value")
-//        XCTAssertEqual(left, Node(1, 2, 3, 4, 5, 6, 7, 8), "Invalid value")
-//        XCTAssertNil(right, "Invalid value")
-//
-//        node = Node(1, 2, 3, 4, 5, 6, 7, 8)
-//        (left, right) = node.split(at: 0)
-//        XCTAssertNil(left, "Invalid value")
-//        XCTAssertEqual(right?.count, 8, "Invalid value")
-//        XCTAssertEqual(right, Node(1, 2, 3, 4, 5, 6, 7, 8), "Invalid value")
+        let node = Node(1, 2, 3, 4, 5, 6, 7, 8)
+        var slice = node.slice(from: 3, to: 6)
+
+        XCTAssertEqual(slice?.count, 3, "Invalid value")
+        XCTAssertEqual(slice, Node(4, 5, 6), "Invalid value")
+
+        slice = node.slice(from: -5, to: -1)
+        XCTAssertNil(slice, "Invalid value")
+
+        slice = node.slice(from: -1, to: 20)
+        XCTAssertEqual(slice?.count, 8, "Invalid value")
+        XCTAssertEqual(slice, Node(1, 2, 3, 4, 5, 6, 7, 8), "Invalid value")
+
+        slice = node.slice(from: 0, to: -6)
+        XCTAssertNil(slice, "Invalid value")
+
+        slice = node.slice(from: 13, to: 16)
+        XCTAssertNil(slice, "Invalid value")
     }
 
     func testP1802() {

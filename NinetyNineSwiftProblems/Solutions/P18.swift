@@ -8,42 +8,37 @@
 import Foundation
 
 extension Node {
-//    func slice(from: Int, to: Int) -> Node {
-//        // If index < 0, there wont be any elements in left
-//        // If index >= count - 1, no elements in right
-//        guard index < count else {
-//            return (left: self, right: nil)
-//        }
-//
-//        guard index > 0 else {
-//            return (left: nil, right: self)
-//        }
-//
-//        var root: Node = self
-//
-//        var currentIdx = 1
-//        let leftNode = Node(value: root.value)
-//        var rightNode: Node?
-//        var currentNode = leftNode
-//
-//        while let next = root.next {
-//            let newNode = Node(value: next.value)
-//
-//            if currentIdx == index {
-//                // Switch to right node list
-//                rightNode = newNode
-//                currentNode = newNode
-//            } else {
-//                currentNode.next = newNode
-//                currentNode = newNode
-//            }
-//
-//            root = next
-//            currentIdx += 1
-//        }
-//
-//        return (leftNode, rightNode)
-//    }
+    // swiftlint:disable identifier_name
+    func slice(from: Int, to: Int) -> Node? {
+        let cnt = count
+        let fromIndex = from < 0 ? 0 : (from <= cnt ? from : cnt)
+        let toIndex = to < 0 ? fromIndex : (to <= cnt ? to : cnt)
+
+        var root: Node? = self
+        var idx = 0
+        var rootNode: Node?
+        var currentNode: Node?
+
+        while let next = root {
+            if fromIndex ..< toIndex ~= idx {
+                let newNode = Node(value: next.value)
+
+                if rootNode == nil {
+                    rootNode = newNode
+                    currentNode = newNode
+                } else {
+                    currentNode?.next = newNode
+                    currentNode = newNode
+                }
+            }
+
+            idx += 1
+            root = root?.next
+        }
+
+        return rootNode
+    }
+    // swiftlint:enable identifier_name
 }
 
 extension Array {
@@ -64,10 +59,8 @@ extension Array {
 
         var ret = [Element]()
 
-        for (idx, elm) in self.enumerated() {
-            if idx >= fromIndex && idx < toIndex {
-                ret.append(elm)
-            }
+        for (idx, elm) in self.enumerated() where fromIndex ..< toIndex ~= idx {
+            ret.append(elm)
         }
 
         return ret
