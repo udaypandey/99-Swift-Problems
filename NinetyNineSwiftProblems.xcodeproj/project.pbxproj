@@ -50,6 +50,7 @@
 		78BC5C38228EC82D00A3CBC6 /* P18Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BC5C37228EC82D00A3CBC6 /* P18Tests.swift */; };
 		78CDC17B2281DDF2008C28F4 /* P05.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDC17A2281DDF2008C28F4 /* P05.swift */; };
 		78CDC17D2281DDFE008C28F4 /* P05Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDC17C2281DDFE008C28F4 /* P05Tests.swift */; };
+		78D17B9A2291C9E600508610 /* P19Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D17B992291C9E600508610 /* P19Tests.swift */; };
 		78D550FD2280CFBA0085A5CA /* P04Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D550FC2280CFBA0085A5CA /* P04Tests.swift */; };
 		78D550FF2280D0120085A5CA /* P04.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D550FE2280D0120085A5CA /* P04.swift */; };
 		8E9513B78212591EEBD32836 /* Pods_NinetyNineSwiftProblems.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806CDFE2AA0B1F671EC0A9A9 /* Pods_NinetyNineSwiftProblems.framework */; };
@@ -116,6 +117,7 @@
 		78BC5C37228EC82D00A3CBC6 /* P18Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P18Tests.swift; sourceTree = "<group>"; };
 		78CDC17A2281DDF2008C28F4 /* P05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P05.swift; sourceTree = "<group>"; };
 		78CDC17C2281DDFE008C28F4 /* P05Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P05Tests.swift; sourceTree = "<group>"; };
+		78D17B992291C9E600508610 /* P19Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P19Tests.swift; sourceTree = "<group>"; };
 		78D550FC2280CFBA0085A5CA /* P04Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P04Tests.swift; sourceTree = "<group>"; };
 		78D550FE2280D0120085A5CA /* P04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P04.swift; sourceTree = "<group>"; };
 		7E5BB776EBA7AF7A04F6E1CA /* Pods-NinetyNineSwiftProblemsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NinetyNineSwiftProblemsTests.debug.xcconfig"; path = "Target Support Files/Pods-NinetyNineSwiftProblemsTests/Pods-NinetyNineSwiftProblemsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				78289C48228DE9430064D2A6 /* P16Tests.swift */,
 				78289C54228E98300064D2A6 /* P17Tests.swift */,
 				78BC5C37228EC82D00A3CBC6 /* P18Tests.swift */,
+				78D17B992291C9E600508610 /* P19Tests.swift */,
 				78044320227EBE65002F08C5 /* P03Tests.swift */,
 				78D550FC2280CFBA0085A5CA /* P04Tests.swift */,
 				78CDC17C2281DDFE008C28F4 /* P05Tests.swift */,
@@ -481,6 +484,7 @@
 				78B97F2B2284B83F00F6EE62 /* P09Tests.swift in Sources */,
 				78D550FD2280CFBA0085A5CA /* P04Tests.swift in Sources */,
 				78289C49228DE9430064D2A6 /* P16Tests.swift in Sources */,
+				78D17B9A2291C9E600508610 /* P19Tests.swift in Sources */,
 				78B97F2E2284B83F00F6EE62 /* P11Tests.swift in Sources */,
 				78B97F2A2284B83F00F6EE62 /* P14Tests.swift in Sources */,
 				78289C55228E98300064D2A6 /* P17Tests.swift in Sources */,
