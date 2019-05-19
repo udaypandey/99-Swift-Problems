@@ -59,9 +59,9 @@ extension Node: CustomStringConvertible {
         var str = ["\(value)"]
 
         var root = self
-        while let next = root.next {
-            str.append("\(next.value)")
-            root = next
+        while let nextNode = root.next {
+            str.append("\(nextNode.value)")
+            root = nextNode
         }
         return "Node(" + str.joined(separator: ", ") + ")"
     }

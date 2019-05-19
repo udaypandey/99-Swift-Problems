@@ -21,15 +21,15 @@ extension Node {
         var currentNode = rootNode
         var currentIdx = 1
 
-        while let next = root.next {
+        while let nextNode = root.next {
             currentIdx += 1
-            root = next
+            root = nextNode
 
             if currentIdx % index == 0 {
                 continue
             }
 
-            let newNode = Node(value: next.value)
+            let newNode = Node(value: nextNode.value)
             currentNode.next = newNode
             currentNode = newNode
         }

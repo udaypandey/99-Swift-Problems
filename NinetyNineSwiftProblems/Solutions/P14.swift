@@ -16,13 +16,13 @@ extension Node {
         let rootNode = Node(value: root.value, next: secondNode)
         var currentNode = secondNode
 
-        while let next = root.next {
-            let sNode = Node(value: next.value)
-            let fNode = Node(value: next.value, next: sNode)
+        while let nextNode = root.next {
+            let sNode = Node(value: nextNode.value)
+            let fNode = Node(value: nextNode.value, next: sNode)
             currentNode.next = fNode
             currentNode = sNode
 
-            root = next
+            root = nextNode
         }
 
         return rootNode

@@ -16,12 +16,12 @@ extension Node {
         let rootNode = generatedNodes.first
         var currentNode = generatedNodes.last
 
-        while let next = root.next {
-            let (fNode, sNode) = genNodes(value: next.value, count: count)
+        while let nextNode = root.next {
+            let (fNode, sNode) = genNodes(value: nextNode.value, count: count)
             currentNode.next = fNode
             currentNode = sNode
 
-            root = next
+            root = nextNode
         }
 
         return rootNode

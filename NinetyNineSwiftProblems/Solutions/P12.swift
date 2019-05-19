@@ -18,13 +18,13 @@ import Foundation
 //        let rootNode = Node<(Int, T)>(value: val)
 //        var currentNode = rootNode
 //
-//        while let next = root.next {
+//        while let nextNode = root.next {
 //            let val = (next.value.count, next.value[0]!)
 //            let newCurrentNode = Node<(Int, T)>(value: val)
 //
 //            currentNode.next = newCurrentNode
 //            currentNode = newCurrentNode
-//            root = next
+//            root = nextNode
 //        }
 //
 //        return rootNode

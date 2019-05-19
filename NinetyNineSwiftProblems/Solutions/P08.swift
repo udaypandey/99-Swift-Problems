@@ -14,14 +14,14 @@ extension Node where T: Equatable {
         var root = self
         var previousValue = self.value
         var newNextNode = newRootNode
-        while let next = root.next {
-            if next.value != previousValue {
-                let elm = Node(value: next.value)
+        while let nextNode = root.next {
+            if nextNode.value != previousValue {
+                let elm = Node(value: nextNode.value)
                 newNextNode.next = elm
                 newNextNode = elm
-                previousValue = next.value
+                previousValue = nextNode.value
             }
-            root = next
+            root = nextNode
         }
 
         return newRootNode

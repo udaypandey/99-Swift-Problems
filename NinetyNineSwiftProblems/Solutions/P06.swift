@@ -13,9 +13,9 @@ extension Node where T: Equatable {
         var root = self
 
         var arr = [root.value]
-        while let next = root.next {
-            arr.append(next.value)
-            root = next
+        while let nextNode = root.next {
+            arr.append(nextNode.value)
+            root = nextNode
         }
 
         // Leverages array palindrome implementation

@@ -19,9 +19,9 @@ extension Node {
         var rootNode: Node?
         var currentNode: Node?
 
-        while let next = root {
+        while let nextNode = root {
             if fromIndex ..< toIndex ~= idx {
-                let newNode = Node(value: next.value)
+                let newNode = Node(value: nextNode.value)
 
                 if rootNode == nil {
                     rootNode = newNode

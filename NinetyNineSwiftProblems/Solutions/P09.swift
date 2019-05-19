@@ -17,22 +17,22 @@ extension Node where T: Equatable {
         var currentNode = rootNode
         var currentValueNode = rootNode.value
 
-        while let next = root.next {
-            if next.value == previousValue {
-                let newValueNode = Node(value: next.value)
+        while let nextNode = root.next {
+            if nextNode.value == previousValue {
+                let newValueNode = Node(value: nextNode.value)
 
                 currentValueNode.next = newValueNode
                 currentValueNode = newValueNode
             } else {
-                let newCurrentNode = Node<Node<T>>(value: Node(value: next.value))
+                let newCurrentNode = Node<Node<T>>(value: Node(value: nextNode.value))
                 currentNode.next = newCurrentNode
 
                 currentNode = newCurrentNode
                 currentValueNode = currentNode.value
 
-                previousValue = next.value
+                previousValue = nextNode.value
             }
-            root = next
+            root = nextNode
         }
 
         return rootNode

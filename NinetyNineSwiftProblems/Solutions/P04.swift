@@ -13,8 +13,8 @@ extension Node {
         var root = self
         var cnt = 1
 
-        while let next = root.next {
-            root = next
+        while let nextNode = root.next {
+            root = nextNode
             cnt += 1
         }
 

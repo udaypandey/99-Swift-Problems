@@ -18,13 +18,13 @@ extension Node where T: Equatable {
         let rootNode = Node<(Int, T)>(value: val)
         var currentNode = rootNode
 
-        while let next = root.next {
-            let val = (next.value.count, next.value[0]!)
+        while let nextNode = root.next {
+            let val = (nextNode.value.count, nextNode.value[0]!)
             let newCurrentNode = Node<(Int, T)>(value: val)
 
             currentNode.next = newCurrentNode
             currentNode = newCurrentNode
-            root = next
+            root = nextNode
         }
 
         return rootNode

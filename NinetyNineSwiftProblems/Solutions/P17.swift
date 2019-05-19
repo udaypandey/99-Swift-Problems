@@ -26,8 +26,8 @@ extension Node {
         var rightNode: Node?
         var currentNode = leftNode
 
-        while let next = root.next {
-            let newNode = Node(value: next.value)
+        while let nextNode = root.next {
+            let newNode = Node(value: nextNode.value)
 
             if currentIdx == index {
                 // Switch to right node list
@@ -38,7 +38,7 @@ extension Node {
                 currentNode = newNode
             }
 
-            root = next
+            root = nextNode
             currentIdx += 1
         }
 

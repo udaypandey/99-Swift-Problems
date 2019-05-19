@@ -17,8 +17,8 @@ extension Node {
         var currentIndex = 0
 
         while currentIndex < index {
-            if let next = root.next {
-                root = next
+            if let nextNode = root.next {
+                root = nextNode
             } else {
                 return nil
             }
